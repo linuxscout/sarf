@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="org/|org/apache/commons/digester/|org/apache/commons/digester/rss/|org/apache/commons/digester/xmlrules/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/zerrouki/workspace/tests/sarf/sarfy/mulibs/commons-beanutils-1.9.3/commons-beanutils-1.9.3.jar"/>
+	<classpathentry kind="lib" path="/home/zerrouki/workspace/tests/sarf/sarfy/mulibs/commons-digester3-3.2/commons-digester3-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/zerrouki/workspace/tests/sarf/sarfy/mulibs/commons-collections4-4.1/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="/home/zerrouki/workspace/tests/sarf/sarfy/mulibs/commons-digester3-3.2-with-deps.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
