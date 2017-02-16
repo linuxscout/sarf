@@ -27,13 +27,13 @@ import java.net.*;
  */
 public class VerbConjugationUI extends JPanel implements IHtmlContentSaver {
     List dataFieldsList;
-    public static final Font FONT = new Font("Traditional Arabic", Font.PLAIN, 30);
+    public static final Font FONT = new Font("Traditional Arabic", Font.PLAIN, 20);
     public static final Border BORDER = BorderFactory.createEtchedBorder();
     private String title;
 
 
     public VerbConjugationUI(List verbConjugationList, String title) {
-        super(new GridLayout(7, 4));
+        super(new GridLayout(8, 6));
         this.title = title;
         dataFieldsList = verbConjugationList;
         setFont(FONT);

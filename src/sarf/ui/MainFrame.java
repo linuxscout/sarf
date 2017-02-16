@@ -10,6 +10,16 @@ import sarf.util.ImagePane;
 import java.util.prefs.Preferences;
 import java.awt.im.InputContext;
 
+import java.awt.*;
+
+import javax.swing.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
+import java.util.*;
+import sarf.util.ImagePane;
+import java.util.prefs.Preferences;
+import java.awt.im.InputContext;
+import java.io.*;
 /**
  * <p>Title: </p>
  *
@@ -84,12 +94,20 @@ public class MainFrame extends JFrame {
         if (inputContext.selectInputMethod(syLocale))
             return;
 
-        //else searching for suitable arabic country one, if it is exists
+        //else searching for suitable Arabic country one, if it is exists
 
         Locale [] locales = Locale.getAvailableLocales();
+        try{
+        String current = new java.io.File( "." ).getCanonicalPath();
+        System.out.println("Current dir:"+current);
+        }
+        catch (IOException ex){
+            System.out.println("Current dir:");
+        }
         for (int i=0; i<locales.length; i++) {
             Locale locale = locales[i];
             System.out.println(i+"");
+
             //if one of the arabic locales suceeded, then ok
             if (locale.getLanguage().equalsIgnoreCase("ar"))
                 if (inputContext.selectInputMethod(locale))

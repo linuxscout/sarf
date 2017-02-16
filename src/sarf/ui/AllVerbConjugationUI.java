@@ -87,7 +87,7 @@ public class AllVerbConjugationUI extends JPanel implements IHtmlContentSaver {
         for (int i = 0; i < 13; i++) {
             Object result = dataFieldsList[k].get(i);
             //vr verb conjugation
-            String vri = result == null ? "" : result.toString();
+            String vri = result == null ? "&nbsp;" : result.toString();
             content = content.replaceFirst("v" +i+'-'+ k, vri);
 
         }

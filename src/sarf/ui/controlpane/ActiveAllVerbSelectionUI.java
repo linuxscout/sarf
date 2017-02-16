@@ -373,8 +373,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
                 //JussiveVerbConjugationUI ui = new JussiveVerbConjugationUI(result, notGeminatedResult, presentJussiveBtn.getText());
                 //ControlPaneContainer.getInstance().openResult(ui);
-                //return result;
-                                return joinList(result, notGeminatedResult);
+                return result;
             }
         }
         else {
@@ -392,8 +391,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
                 //JussiveVerbConjugationUI ui = new JussiveVerbConjugationUI(result, notGeminatedResult, presentJussiveBtn.getText());
                 //ControlPaneContainer.getInstance().openResult(ui);
-                //return result;
-                return joinList(result, notGeminatedResult);
+                return result;
             }
         }
     }
@@ -412,9 +410,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
         //JussiveVerbConjugationUI ui = new JussiveVerbConjugationUI(conjResult.getFinalResult(), notGeminatedConjResult.getFinalResult(), presentJussiveBtn.getText());
         //ControlPaneContainer.getInstance().openResult(ui);
-        result = conjResult.getFinalResult();
-        List notGeminatedResult = notGeminatedConjResult.getFinalResult();
-        return joinList(result, notGeminatedResult);
+        return result;
 
     }
     return result;
@@ -477,8 +473,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
                 //ImperativeVerbConjugationUI ui = new ImperativeVerbConjugationUI(result, notGeminatedResult, imperativeBtn.getText());
                 //ControlPaneContainer.getInstance().openResult(ui);
-//                return result;
-                                return joinList(result, notGeminatedResult);
+                return result;
             }
         }
         else {
@@ -498,8 +493,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
                 //ImperativeVerbConjugationUI ui = new ImperativeVerbConjugationUI(result, notGeminatedResult, imperativeBtn.getText());
                 //ControlPaneContainer.getInstance().openResult(ui);
-//                return result;
-                                return joinList(result, notGeminatedResult);
+                return result;
             }
         }
     }
@@ -520,9 +514,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
         //ImperativeVerbConjugationUI ui = new ImperativeVerbConjugationUI(conjResult.getFinalResult(), notGeminatedConjResult.getFinalResult(), imperativeBtn.getText());
         //ControlPaneContainer.getInstance().openResult(ui);
-        result = conjResult.getFinalResult();
-        List notGeminatedResult = notGeminatedConjResult.getFinalResult();
-                        return joinList(result, notGeminatedResult);  
+        return result;
     }
     return result;
     }    
@@ -548,8 +540,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
                 //ImperativeVerbConjugationUI ui = new ImperativeVerbConjugationUI(result, notGeminatedResult, imperativeEmphasizedBtn.getText());
                 //ControlPaneContainer.getInstance().openResult(ui);
-//                return result;
-                                return joinList(result, notGeminatedResult);
+                return result;
             }
         }
         else {
@@ -569,8 +560,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
                 //ImperativeVerbConjugationUI ui = new ImperativeVerbConjugationUI(result, notGeminatedResult, imperativeEmphasizedBtn.getText());
                 //ControlPaneContainer.getInstance().openResult(ui);
-//                return result;
-                                return joinList(result, notGeminatedResult);
+                return result;
             }
         }
     }
@@ -590,12 +580,7 @@ public class ActiveAllVerbSelectionUI extends JPanel implements IControlPane, Au
 
         //ImperativeVerbConjugationUI ui = new ImperativeVerbConjugationUI(conjResult.getFinalResult(), notGeminatedConjResult.getFinalResult(), imperativeEmphasizedBtn.getText());
         //ControlPaneContainer.getInstance().openResult(ui);
-        //ControlPaneContainer.getInstance().openResult(ui); 
-
-        result = conjResult.getFinalResult();
-        List notGeminatedResult = notGeminatedConjResult.getFinalResult();
-                        return joinList(result, notGeminatedResult);        
-        //return result;
+        return result;
 
     } 
     return result;
@@ -727,8 +712,8 @@ public List passivePresentJussiveConjugate() {
                         selectionInfo.getAugmentationFormulaNo(),
                         conjResult.getOriginalResult(), SystemConstants.PRESENT_TENSE, false, false, ActiveAllVerbSelectionUI.this);
                 List notGeminatedResult = notGeminatedConjResult.getFinalResult();
-                                return joinList(result, notGeminatedResult);
-//                return result;
+
+                return result;
             }
         }
         else {
@@ -744,8 +729,8 @@ public List passivePresentJussiveConjugate() {
                         conjResult.getOriginalResult(),
                         SystemConstants.PRESENT_TENSE, false, false);
                 List notGeminatedResult = notGeminatedConjResult.getFinalResult();
-                                return joinList(result, notGeminatedResult);
-//                return result;
+
+                return result;
             }
         }
     }
@@ -761,10 +746,8 @@ public List passivePresentJussiveConjugate() {
         sarf.verb.quadriliteral.ConjugationResult conjResult = sarf.verb.quadriliteral.modifier.QuadrilateralModifier.getInstance().build((QuadrilateralRoot) selectionInfo.getRoot(), selectionInfo.getAugmentationFormulaNo(), selectionInfo.getKov(), result, SystemConstants.PRESENT_TENSE, false);
         sarf.verb.quadriliteral.ConjugationResult notGeminatedConjResult = sarf.verb.quadriliteral.modifier.QuadrilateralModifier.getInstance().build((QuadrilateralRoot) selectionInfo.getRoot(), selectionInfo.getAugmentationFormulaNo(), selectionInfo.getKov(), conjResult.getOriginalResult(),
                 SystemConstants.PRESENT_TENSE, false, false);
-        result = conjResult.getFinalResult();
-        List notGeminatedResult = notGeminatedConjResult.getFinalResult();
-        return joinList(result, notGeminatedResult);          
-//        return result;
+
+        return result;
 
 
     }
@@ -806,18 +789,6 @@ public List passivePresentEmphasizedConjugate() {
     return result;
 }
 
-public List joinList(List list1, List list2)
-{
-	/// join result and not geminated conjugation with "/"
-    for (int k=0; k< list1.size(); k++)
-    {
-    	if (list1.get(k)!= list2.get(k))
-    			{
-    		    list1.set(k, list1.get(k)+"/"+ list2.get(k));
-    			}
-    }
-    return list1;
-}
-
+    
     
 }

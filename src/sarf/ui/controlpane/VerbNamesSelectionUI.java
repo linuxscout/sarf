@@ -27,10 +27,12 @@ public class VerbNamesSelectionUI extends JPanel implements IControlPane {
         JPanel buttonsPanel = new APanel(new GridLayout(1, 4));
 
         JButton activeVerbBtn = new RenderedButton("«·√›⁄«· «·„»‰Ì… ··„⁄·Ê„");
+        JButton activeAllVerbBtn = new RenderedButton("ﬂ· «· ’—Ì›« ");
         JButton passiveVerbBtn = new RenderedButton("«·√›⁄«· «·„»‰Ì… ··„ÃÂÊ·");
         JButton derivedNamesBtn = new RenderedButton("«·√”„«¡ «·„‘ ﬁ…");
         JButton gerundBtn = new RenderedButton("«·„’«œ—");
 
+        buttonsPanel.add(activeAllVerbBtn);        
         buttonsPanel.add(activeVerbBtn);
         buttonsPanel.add(passiveVerbBtn);
         buttonsPanel.add(derivedNamesBtn);
@@ -44,6 +46,14 @@ public class VerbNamesSelectionUI extends JPanel implements IControlPane {
                 verbSelectionUI.setInfo(selectionInfo);
             }
         });
+        
+        
+        activeAllVerbBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ActiveAllVerbSelectionUI verbSelectionUI = (ActiveAllVerbSelectionUI) ControlPaneContainer.getInstance().openControlPane(ActiveAllVerbSelectionUI.class.getName());
+                verbSelectionUI.setInfo(selectionInfo);
+            }
+        });        
 
         passiveVerbBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

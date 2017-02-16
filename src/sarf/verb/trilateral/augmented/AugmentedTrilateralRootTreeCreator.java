@@ -2,8 +2,8 @@ package sarf.verb.trilateral.augmented;
 
 
 import java.io.File;
-import org.apache.commons.digester.Digester;
-import sarf.*;
+import org.apache.commons.digester3.Digester;
+import sarf.AugmentationFormula;
 
 /**
  * <p>Title: </p>

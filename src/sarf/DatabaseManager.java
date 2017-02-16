@@ -86,7 +86,8 @@ public class DatabaseManager {
                 tripleAugmentedTreeMap.put(c1+"", rootsTree);
             }
             catch (Exception ex) {
-                ex.printStackTrace();
+            	System.out.print("The square root of ");
+               // ex.printStackTrace();
             }
         }
         return rootsTree;

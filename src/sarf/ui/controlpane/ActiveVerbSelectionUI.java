@@ -13,7 +13,7 @@ import sarf.*;
 import sarf.verb.quadriliteral.*;
 import sarf.verb.trilateral.augmented.modifier.AugmentedTrilateralModifierListener;
 
-/**
+/**S
  * <p>Title: Sarf Program</p>
  *
  * <p>Description: </p>
@@ -29,6 +29,7 @@ public class ActiveVerbSelectionUI extends JPanel implements IControlPane, Augme
     private SelectionInfo selectionInfo;
 
     ToggleRenderedButton pastBtn = new ToggleRenderedButton("«·„«÷Ì");
+    
     ToggleRenderedButton presentNominativeBtn = new ToggleRenderedButton("«·„÷«—⁄ «·„—›Ê⁄");
     ToggleRenderedButton presentAccusativeBtn = new ToggleRenderedButton("«·„÷«—⁄ «·„‰’Ê»");
     ToggleRenderedButton presentJussiveBtn = new ToggleRenderedButton("«·„÷«—⁄ «·„Ã“Ê„");
@@ -52,7 +53,7 @@ public class ActiveVerbSelectionUI extends JPanel implements IControlPane, Augme
         buttonGroup.add(imperativeBtn);
         buttonGroup.add(imperativeEmphasizedBtn);
 
-        buttonsPanel.add(pastBtn);
+        buttonsPanel.add(pastBtn);    
         buttonsPanel.add(presentNominativeBtn);
         buttonsPanel.add(presentAccusativeBtn);
         buttonsPanel.add(presentJussiveBtn);
